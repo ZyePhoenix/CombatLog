@@ -18,7 +18,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package me.iiSnipez.CombatLog;
+package CombatLog;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

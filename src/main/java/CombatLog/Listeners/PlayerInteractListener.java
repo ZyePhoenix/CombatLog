@@ -18,7 +18,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package me.iiSnipez.CombatLog.Listeners;
+package CombatLog.Listeners;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -27,7 +27,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-import me.iiSnipez.CombatLog.CombatLog;
+import CombatLog.CombatLog;
 
 public class PlayerInteractListener implements Listener {
 

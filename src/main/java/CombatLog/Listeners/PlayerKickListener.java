@@ -18,7 +18,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package me.iiSnipez.CombatLog.Listeners;
+package CombatLog.Listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -27,9 +27,9 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerKickEvent;
 
-import me.iiSnipez.CombatLog.CombatLog;
-import me.iiSnipez.CombatLog.Events.PlayerUntagEvent;
-import me.iiSnipez.CombatLog.Events.PlayerUntagEvent.UntagCause;
+import CombatLog.CombatLog;
+import CombatLog.Events.PlayerUntagEvent;
+import CombatLog.Events.PlayerUntagEvent.UntagCause;
 
 public class PlayerKickListener implements Listener {
 

@@ -18,7 +18,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package me.iiSnipez.CombatLog;
+package CombatLog;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -29,7 +29,7 @@ import java.net.URL;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 
-import me.iiSnipez.CombatLog.CombatLog;;
+import CombatLog.CombatLog;;
 
 public class Updater {
 

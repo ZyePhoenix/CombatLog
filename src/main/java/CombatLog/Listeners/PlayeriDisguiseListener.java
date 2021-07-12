@@ -18,7 +18,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package me.iiSnipez.CombatLog.Listeners;
+package CombatLog.Listeners;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -26,7 +26,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 
 import de.robingrether.idisguise.api.DisguiseEvent;
-import me.iiSnipez.CombatLog.CombatLog;
+import CombatLog.CombatLog;
 
 public class PlayeriDisguiseListener implements Listener {
 

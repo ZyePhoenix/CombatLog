@@ -18,7 +18,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package me.iiSnipez.CombatLog.Listeners;
+package CombatLog.Listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -34,14 +34,15 @@ import com.massivecraft.factions.entity.BoardColl;
 import com.massivecraft.factions.entity.Faction;
 import com.massivecraft.factions.entity.FactionColl;
 import com.massivecraft.massivecore.ps.PS;
-import com.sk89q.worldguard.bukkit.WGBukkit;
+import com.sk89q.worldedit.bukkit.BukkitAdapter;
 import com.sk89q.worldguard.protection.ApplicableRegionSet;
-import com.sk89q.worldguard.protection.flags.DefaultFlag;
+import com.sk89q.worldguard.protection.flags.Flags;
 import com.sk89q.worldguard.protection.flags.StateFlag;
+import com.sk89q.worldguard.WorldGuard;
 
-import me.iiSnipez.CombatLog.CombatLog;
-import me.iiSnipez.CombatLog.Events.PlayerUntagEvent;
-import me.iiSnipez.CombatLog.Events.PlayerUntagEvent.UntagCause;
+import CombatLog.CombatLog;
+import CombatLog.Events.PlayerUntagEvent;
+import CombatLog.Events.PlayerUntagEvent.UntagCause;
 
 public class PlayerMoveListener implements Listener {
 
@@ -72,8 +73,8 @@ public class PlayerMoveListener implements Listener {
 				}
 			}
 			if(plugin.usesWorldGuard && plugin.removeTagInPvPDisabledArea) {
-				ApplicableRegionSet ars = WGBukkit.getPlugin().getRegionManager(player.getWorld()).getApplicableRegions(player.getLocation());
-				if(ars.queryState(null, DefaultFlag.PVP) == StateFlag.State.DENY) {
+				ApplicableRegionSet ars = WorldGuard.getInstance().getPlatform().getRegionContainer().get(BukkitAdapter.adapt(player.getWorld())).getApplicableRegions(BukkitAdapter.asBlockVector(player.getLocation()));
+				if(ars.queryState(null, Flags.PVP) == StateFlag.State.DENY) {
 					PlayerUntagEvent event1 = new PlayerUntagEvent(player, UntagCause.SAFE_AREA);
 					Bukkit.getServer().getPluginManager().callEvent(event1);
 				}

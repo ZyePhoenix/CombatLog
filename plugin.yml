@@ -8,6 +8,7 @@ website: http://dev.bukkit.org/server-mods/combatlog
 main: CombatLog.CombatLog
 database: false
 softdepend: [Factions, LibsDisguises, iDisguise]
+depend: [WorldGuard]
 
 commands:
     combatlog:

@@ -18,14 +18,14 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package me.iiSnipez.CombatLog.Listeners;
+package CombatLog.Listeners;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-import me.iiSnipez.CombatLog.CombatLog;
+import CombatLog.CombatLog;
 
 public class PlayerJoinListener implements Listener {
 

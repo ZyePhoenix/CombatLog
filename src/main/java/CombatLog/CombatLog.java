@@ -18,7 +18,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package me.iiSnipez.CombatLog;
+package CombatLog;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -41,22 +41,22 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
 
-import me.iiSnipez.CombatLog.Events.PlayerUntagEvent;
-import me.iiSnipez.CombatLog.Events.PlayerUntagEvent.UntagCause;
-import me.iiSnipez.CombatLog.Listeners.EntityDamageByEntityListener;
-import me.iiSnipez.CombatLog.Listeners.PlayerCommandPreprocessListener;
-import me.iiSnipez.CombatLog.Listeners.PlayerDeathListener;
-import me.iiSnipez.CombatLog.Listeners.PlayerDisguiseListener;
-import me.iiSnipez.CombatLog.Listeners.PlayerInteractListener;
-import me.iiSnipez.CombatLog.Listeners.PlayerJoinListener;
-import me.iiSnipez.CombatLog.Listeners.PlayerKickListener;
-import me.iiSnipez.CombatLog.Listeners.PlayerMoveListener;
-import me.iiSnipez.CombatLog.Listeners.PlayerQuitListener;
-import me.iiSnipez.CombatLog.Listeners.PlayerTagListener;
-import me.iiSnipez.CombatLog.Listeners.PlayerTeleportListener;
-import me.iiSnipez.CombatLog.Listeners.PlayerToggleFlightListener;
-import me.iiSnipez.CombatLog.Listeners.PlayerUntagListener;
-import me.iiSnipez.CombatLog.Listeners.PlayeriDisguiseListener;
+import CombatLog.Events.PlayerUntagEvent;
+import CombatLog.Events.PlayerUntagEvent.UntagCause;
+import CombatLog.Listeners.EntityDamageByEntityListener;
+import CombatLog.Listeners.PlayerCommandPreprocessListener;
+import CombatLog.Listeners.PlayerDeathListener;
+import CombatLog.Listeners.PlayerDisguiseListener;
+import CombatLog.Listeners.PlayerInteractListener;
+import CombatLog.Listeners.PlayerJoinListener;
+import CombatLog.Listeners.PlayerKickListener;
+import CombatLog.Listeners.PlayerMoveListener;
+import CombatLog.Listeners.PlayerQuitListener;
+import CombatLog.Listeners.PlayerTagListener;
+import CombatLog.Listeners.PlayerTeleportListener;
+import CombatLog.Listeners.PlayerToggleFlightListener;
+import CombatLog.Listeners.PlayerUntagListener;
+import CombatLog.Listeners.PlayeriDisguiseListener;
 import me.libraryaddict.disguise.DisguiseAPI;
 
 public class CombatLog extends JavaPlugin {

@@ -18,7 +18,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package me.iiSnipez.CombatLog.Listeners;
+package CombatLog.Listeners;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
@@ -34,8 +34,8 @@ import com.massivecraft.factions.entity.BoardColl;
 import com.massivecraft.factions.entity.Faction;
 import com.massivecraft.massivecore.ps.PS;
 
-import me.iiSnipez.CombatLog.CombatLog;
-import me.iiSnipez.CombatLog.Events.PlayerTagEvent;
+import CombatLog.CombatLog;
+import CombatLog.Events.PlayerTagEvent;
 
 public class PlayerTagListener implements Listener {
 

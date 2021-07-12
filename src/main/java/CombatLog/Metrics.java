@@ -26,7 +26,7 @@
  * either expressed or implied, of anybody else.
  */
 
-package me.iiSnipez.CombatLog;
+package CombatLog;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;

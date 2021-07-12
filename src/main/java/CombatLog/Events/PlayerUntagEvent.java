@@ -18,7 +18,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package me.iiSnipez.CombatLog.Events;
+package CombatLog.Events;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
