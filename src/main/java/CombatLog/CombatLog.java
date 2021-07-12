@@ -205,13 +205,8 @@ public class CombatLog extends JavaPlugin {
 					Map.Entry<String, Long> c = iter.next();
 					Player player = getServer().getPlayer(c.getKey());
 					if (useActionBar) {
-						if (newActionBar) {
-							aBar.sendActionBarNew(player, "" + "" + actionBarInCombatMessage.replaceAll("<time>",
-									"" + tagTimeRemaining(player.getName())));
-						} else {
-							aBar.sendActionBarOld(player, "" + "" + actionBarInCombatMessage.replaceAll("<time>",
-									"" + tagTimeRemaining(player.getName())));
-						}
+						player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(actionBarInCombatMessage.replaceAll("<time>",
+								"" + tagTimeRemaining(player.getName()))));
 					}
 					if (getCurrentTime() - (long) c.getValue().longValue() >= tagDuration) {
 						iter.remove();
@@ -285,8 +280,6 @@ public class CombatLog extends JavaPlugin {
 		updater = new Updater(this);
 		commandExec = new CommandExec(this);
 		vars = new Variables(this);
-		aBar = new ActionBar(this);
-		aBar.getBukkitVersion();
 	}
 
 	public void removeFly(Player player) {

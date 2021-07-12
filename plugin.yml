@@ -1,8 +1,9 @@
 name: ${project.name}
 version: ${project.version}
+api-version: 1.13
 description: Punish players who log out while in Combat.
-author: iiSnipez
-authors: [JackProehl]
+author: ZyePhoenix
+authors: [iiSnipez, JackProehl]
 website: http://dev.bukkit.org/server-mods/combatlog
 
 main: CombatLog.CombatLog
