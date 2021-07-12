@@ -1,11 +1,11 @@
-name: CombatLog
-version: 2.3.1
+name: ${project.name}
+version: ${project.version}
 description: Punish players who log out while in Combat.
 author: iiSnipez
 authors: [JackProehl]
 website: http://dev.bukkit.org/server-mods/combatlog
 
-main: me.iiSnipez.CombatLog.CombatLog
+main: CombatLog.CombatLog
 database: false
 softdepend: [Factions, LibsDisguises, iDisguise]
 
