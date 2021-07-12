@@ -30,8 +30,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import com.massivecraft.factions.Board;
-import com.massivecraft.factions.FLocation;
 import com.massivecraft.factions.entity.BoardColl;
 import com.massivecraft.factions.entity.Faction;
 import com.massivecraft.massivecore.ps.PS;
@@ -63,14 +61,8 @@ public class PlayerTagListener implements Listener {
 				if (!plugin.disableWorldNames.contains(p.getWorld().getName())) {
 					Location l = p.getLocation();
 					if (plugin.usesFactions) {
-						if (plugin.useNewFactions) {
-							faction = BoardColl.get().getFactionAt(PS.valueOf(l));
-							if (faction.getName().equalsIgnoreCase("SafeZone")) {
-								return;
-							}
-						}
-						if (plugin.useLegacyFactions
-								&& Board.getInstance().getFactionAt(new FLocation(l)).isSafeZone()) {
+						faction = BoardColl.get().getFactionAt(PS.valueOf(l));
+						if (faction.getName().equalsIgnoreCase("SafeZone")) {
 							return;
 						}
 					}
@@ -112,14 +104,8 @@ public class PlayerTagListener implements Listener {
 			if (!p.hasPermission("combatlog.bypass")) {
 				if (!plugin.disableWorldNames.contains(p.getWorld().getName())) {
 					if (plugin.usesFactions) {
-						if (plugin.useNewFactions) {
-							faction = BoardColl.get().getFactionAt(PS.valueOf(l));
-							if (faction.getName().equalsIgnoreCase("SafeZone")) {
-								return;
-							}
-						}
-						if (plugin.useLegacyFactions
-								&& Board.getInstance().getFactionAt(new FLocation(l)).isSafeZone()) {
+						faction = BoardColl.get().getFactionAt(PS.valueOf(l));
+						if (faction.getName().equalsIgnoreCase("SafeZone")) {
 							return;
 						}
 					}

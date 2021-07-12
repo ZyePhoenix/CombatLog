@@ -28,8 +28,6 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 
-import com.massivecraft.factions.Board;
-import com.massivecraft.factions.FLocation;
 import com.massivecraft.factions.entity.BoardColl;
 import com.massivecraft.factions.entity.Faction;
 import com.massivecraft.factions.entity.FactionColl;
@@ -60,16 +58,11 @@ public class PlayerMoveListener implements Listener {
 				
 		if (plugin.taggedPlayers.containsKey(player.getName())) {
 			if (plugin.usesFactions && plugin.removeTagInSafeZone) {
-				if (plugin.useNewFactions) {
-					factionIn = BoardColl.get().getFactionAt(PS.valueOf(l));
-					if (factionIn.equals(FactionColl.get().getSafezone())) {
-						PlayerUntagEvent event1 = new PlayerUntagEvent(player, UntagCause.SAFE_AREA);
-						Bukkit.getServer().getPluginManager().callEvent(event1);
-						return;
-					}
-				} else if (plugin.useLegacyFactions && Board.getInstance().getFactionAt(new FLocation(l)).isSafeZone()) {
+				factionIn = BoardColl.get().getFactionAt(PS.valueOf(l));
+				if (factionIn.equals(FactionColl.get().getSafezone())) {
 					PlayerUntagEvent event1 = new PlayerUntagEvent(player, UntagCause.SAFE_AREA);
 					Bukkit.getServer().getPluginManager().callEvent(event1);
+					return;
 				}
 			}
 			if(plugin.usesWorldGuard && plugin.removeTagInPvPDisabledArea) {
