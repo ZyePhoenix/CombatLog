@@ -82,9 +82,6 @@ public class PlayerMoveListener implements Listener {
 			if (plugin.removeFlyEnabled) {
 				plugin.removeFly(player);
 			}
-			if (plugin.removeDisguiseEnabled) {
-				plugin.removeDisguise(player);
-			}
 		}
 	}
 }

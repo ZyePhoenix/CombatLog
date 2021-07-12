@@ -27,10 +27,9 @@ ActionBar: true
 BossBar: true
 
 # Add modes you want removed during Combat under Remove-Modes.
-# Available Modes: fly, disguise.
+# Available Modes: fly.
 Remove-Modes:
   - fly
-  - disguise
 
 # onKick: if true, remove Tags when players are kicked.
 # onLagout: if true, remove Tags when players lag out.
@@ -54,7 +53,6 @@ Commands:
   - tpahere
   - warp
   - fly
-  - disguise
 
 # Kill players when they CombatLog.
 Kill: true

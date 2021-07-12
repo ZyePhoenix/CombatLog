@@ -87,8 +87,6 @@ public class PlayerTagListener implements Listener {
 										.replaceAll("<time>", "" + plugin.tagTimeRemaining(p.getName())));
 							}
 						}
-						if (plugin.usesLibsDisguise && plugin.removeDisguiseEnabled)
-							plugin.removeDisguise(p);
 						if (plugin.removeFlyEnabled)
 							plugin.removeFly(p);
 						if (plugin.removeInvisPotion) {
@@ -98,8 +96,6 @@ public class PlayerTagListener implements Listener {
 					} else {
 						plugin.taggedPlayers.remove(p.getName());
 						plugin.taggedPlayers.put(p.getName(), plugin.getCurrentTime());
-						if (plugin.removeDisguiseEnabled)
-							plugin.removeDisguise(p);
 						if (plugin.removeFlyEnabled)
 							plugin.removeFly(p);
 						if (plugin.removeInvisPotion) {
@@ -145,8 +141,6 @@ public class PlayerTagListener implements Listener {
 										.replaceAll("<time>", "" + plugin.tagTimeRemaining(p.getName())));
 							}
 						}
-						if (plugin.usesLibsDisguise && plugin.removeDisguiseEnabled)
-							plugin.removeDisguise(p);
 						if (plugin.removeFlyEnabled)
 							plugin.removeFly(p);
 						if (plugin.removeInvisPotion) {
@@ -156,8 +150,6 @@ public class PlayerTagListener implements Listener {
 					} else {
 						plugin.taggedPlayers.remove(p.getName());
 						plugin.taggedPlayers.put(p.getName(), plugin.getCurrentTime());
-						if (plugin.removeDisguiseEnabled)
-							plugin.removeDisguise(p);
 						if (plugin.removeFlyEnabled)
 							plugin.removeFly(p);
 						if (plugin.removeInvisPotion) {

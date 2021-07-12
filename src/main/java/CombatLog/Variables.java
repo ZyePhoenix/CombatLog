@@ -22,8 +22,6 @@ package CombatLog;
 
 import org.bukkit.Bukkit;
 
-import de.robingrether.idisguise.api.DisguiseAPI;
-
 public class Variables {
 
 	CombatLog plugin;
@@ -41,9 +39,6 @@ public class Variables {
 		plugin.tagDuration = plugin.clConfig.getCLConfig().getInt("Tag-Duration");
 		if (plugin.clConfig.getCLConfig().getStringList("Remove-Modes").contains("fly")) {
 			plugin.removeFlyEnabled = true;
-		}
-		if (plugin.clConfig.getCLConfig().getStringList("Remove-Modes").contains("disguise")) {
-			plugin.removeDisguiseEnabled = true;
 		}
 		plugin.removeTagOnKick = plugin.clConfig.getCLConfig().getBoolean("Remove-Tag.onKick");
 		plugin.removeTagOnLagout = plugin.clConfig.getCLConfig().getBoolean("Remove-Tag.onLagout");
@@ -150,8 +145,4 @@ public class Variables {
 			plugin.newActionBar = false;
 		}
 	}
-	
-	public DisguiseAPI initDis() {
-		return Bukkit.getServer().getServicesManager().getRegistration(DisguiseAPI.class).getProvider();
-	}	
 }
