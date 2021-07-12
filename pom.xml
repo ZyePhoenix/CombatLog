@@ -80,13 +80,13 @@
         <dependency>
             <groupId>LibsDisguises</groupId>
             <artifactId>LibsDisguises</artifactId>
-            <version>9.3.0</version>
+            <version>10.0.25</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>de.robingrether.idisguise</groupId>
             <artifactId>idisguise-core</artifactId>
-            <version>5.8.2</version>
+            <version>5.8.3-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
